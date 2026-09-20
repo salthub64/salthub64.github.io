@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5g天天奭多人运动-最新高清漫画资源与阅读平台</title>
+    <meta name="description" content="5g天天奭多人运动漫画全集在线阅读，提供高清无修版本，更新速度快，阅读体验流畅。收录大量热门多人运动题材漫画，满足读者对高清、解压内容的阅读需求。">
+    <meta name="keywords" content="5g天天奭多人运动,多人运动漫画,高清漫画,在线阅读,5g天天奭">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-sub: #747d8c;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            background: var(--bg-color);
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 4px;
+            font-size: 0.9rem;
+            width: 150px;
+        }
+
+        .search-box button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--text-sub);
+        }
+
+        /* 首屏 Hero */
+        .hero {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 栏目分类 */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 8px 24px;
+            border-radius: 20px;
+            background: white;
+            border: 1px solid #e1e1e1;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* 漫画列表网格 */
+        .manga-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .manga-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .manga-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 280px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 推荐区域 */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e1e1;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .hot-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .hot-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f2f6;
+        }
+
+        .hot-item:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ddd;
+            width: 30px;
+            text-align: center;
+        }
+
+        .rank-num.top-1 { color: #ff4757; }
+        .rank-num.top-2 { color: #ffa502; }
+        .rank-num.top-3 { color: #ff7f50; }
+
+        .hot-info h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .hot-info p {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #a4b0be;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3d4649;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 简化移动端展示 */
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .manga-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .card-image {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                5g天天奭
+            </a>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">最新更新</a>
+                <a href="#">分类浏览</a>
+                <a href="#">排行榜</a>
+                <a href="#">社区讨论</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索漫画...">
+                <button type="button">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>5g天天奭多人运动</h1>
+            <p>沉浸式高清阅读体验，收录最新热门多人运动题材漫画，画质清晰，更新迅速，满足您对高品质二次元内容的探索欲望。</p>
+        </div>
+    </section>
+
+    <!-- 主体内容 -->
+    <main class="container">
+        
+        <!-- 分类标签 -->
+        <div class="category-tabs">
+            <button class="tab-btn active">全部</button>
+            <button class="tab-btn">多人运动</button>
+            <button class="tab-btn">都市生活</button>
+            <button class="tab-btn">职场风云</button>
+            <button class="tab-btn">校园青春</button>
+            <button class="tab-btn">特殊题材</button>
+        </div>
+
+        <!-- 热门推荐网格 -->
+        <section class="section-header">
+            <h2 class="section-title">热门推荐</h2>
+            <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">查看更多 &rarr;</a>
+        </section>
+
+        <div class="manga-grid">
+            <!-- 卡片 1 -->
+            <article class="manga-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/manga1/300/400" alt="5g天天奭多人运动封面">
+                    <span class="badge">连载中</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">5g天天奭多人运动：都市夜未眠</h3>
+                    <div class="card-meta">
+                        <span>更新至 128话</span>
+                        <span>热度 9.8</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 2 -->
+            <article class="manga-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/manga2/300/400" alt="5g天天奭多人运动封面">
+                    <span class="badge">热门</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">5g天天奭多人运动：午夜派对</h3>
+                    <div class="card-meta">
+                        <span>更新至 85话</span>
+                        <span>热度 9.5</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 3 -->
+            <article class="manga-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/manga3/300/400" alt="5g天天奭多人运动封面">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">5g天天奭多人运动：职场新规则</h3>
+                    <div class="card-meta">
+                        <span>更新至 210话</span>
+                        <span>热度 9.2</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 4 -->
+            <article class="manga-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/manga4/300/400" alt="5g天天奭多人运动封面">
+                    <span class="badge">完结</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">5g天天奭多人运动：极限挑战</h3>
+                    <div class="card-meta">
+                        <span>全卷完结</span>
+                        <span>热度 9.9</span>
+                    </div>
+                </div>
+            </article>
+            
+             <!-- 卡片 5 -->
+             <article class="manga-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/manga5/300/400" alt="5g天天奭多人运动封面">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">5g天天奭多人运动：周末狂欢</h3>
+                    <div class="card-meta">
+                        <span>更新至 45话</span>
+                        <span>热度 8.9</span>
+                    </div>
+                </div>
+            </article>
+
+             <!-- 卡片 6 -->
+             <article class="manga-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/manga6/300/400" alt="5g天天奭多人运动封面">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">5g天天奭多人运动：极限运动</h3>
+                    <div class="card-meta">
+                        <span>连载中</span>
+                        <span>热度 9.1</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- 热门榜单 -->
+        <section class="section-header">
+            <h2 class="section-title">排行榜</h2>
+        </section>
+
+        <div class="hot-list">
+            <div class="hot-item">
+                <div class="rank-num top-1">1</div>
+                <div class="hot-info">
+                    <h3>5g天天奭多人运动：都市夜未眠</h3>
+                    <p>多人运动 | 连续霸榜30天 | 12.5万人追更</p>
+                </div>
+            </div>
+            <div class="hot-item">
+                <div class="rank-num top-2">2</div>
+                <div class="hot-info">
+                    <h3>5g天天奭多人运动：极限挑战</h3>
+                    <p>极限运动 | 评分最高 | 8.2万人追更</p>
+                </div>
+            </div>
+            <div class="hot-item">
+                <div class="rank-num top-3">3</div>
+                <div class="hot-info">
+                    <h3>5g天天奭多人运动：职场新规则</h3>
+                    <p>职场 | 高人气 | 7.5万人追更</p>
+                </div>
+            </div>
+            <div class="hot-item">
+                <div class="rank-num">4</div>
+                <div class="hot-info">
+                    <h3>5g天天奭多人运动：午夜派对</h3>
+                    <p>多人运动 | 热度持续攀升 | 6.1万人追更</p>
+                </div>
+            </div>
+            <div class="hot-item">
+                <div class="rank-num">5</div>
+                <div class="hot-info">
+                    <h3>5g天天奭多人运动：周末狂欢</h3>
+                    <p>多人运动 | 新晋热门 | 5.8万人追更</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阅读指南与提示 -->
+        <section style="margin-top: 40px; background: white; padding: 30px; border-radius: 8px;">
+            <h2 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">阅读指南</h2>
+            <p style="margin-bottom: 10px;">欢迎来到5g天天奭多人运动专题站。本站致力于提供最流畅、最清晰的漫画阅读体验。所有作品均为高清版本，支持手机、平板及电脑端访问。</p>
+            <ul style="margin-left: 20px; color: var(--text-sub); font-size: 0.9rem;">
+                <li style="margin-bottom: 8px;">• 支持自动翻页与手动控制，阅读更舒适。</li>
+                <li style="margin-bottom: 8px;">• 每日定时更新，第一时间同步最新章节。</li>
+                <li style="margin-bottom: 8px;">• 严格遵守相关法律法规，内容仅供娱乐参考。</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">5g天天奭是一个专注于高清漫画阅读的在线平台，致力于为读者提供最优质的二次元内容服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">最新更新</a></li>
+                        <li><a href="#">排行榜</a></li>
+                        <li><a href="#">分类导航</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">阅读帮助</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系站长</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 5g天天奭多人运动阅读站. All Rights Reserved. 本站内容仅供学习交流使用，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
